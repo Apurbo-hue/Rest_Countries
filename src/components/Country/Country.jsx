@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-const Country = ({country}) => {
+const Country = ({country,handleVisitedCountries}) => {
 
-    const [visited,setVisited] = useState(false)
+    const [visited,setVisited] = useState(false)//handle visited
     const handleVisited=()=>{
          setVisited(visited?false:true)
+         handleVisitedCountries(country)
     }
 
     return (
