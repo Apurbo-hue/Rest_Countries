@@ -6,7 +6,7 @@ const Countries = ({countriesPromise}) => {
     const countries = countriesData.countries
     return (
         <div className='grid grid-cols-3 gap-4'>
-            {countries.map((country)=><Country country={country}></Country>)}
+            {countries.map((country)=><Country key={country.cca3.cca3} country={country}></Country>)}
         </div>
     );
 };
